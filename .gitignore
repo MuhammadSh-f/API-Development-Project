@@ -1,0 +1,28 @@
+# Environment
+.env
+.env.local
+
+# Dependencies
+node_modules/
+
+# Compiled output
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# Docker data
+docker-data/
+
+# Redis data
+dump.rdb
+
+# OS / IDE specific
+.DS_Store
+Thumbs.db
+.vscode/
+
+# TypeScript cache
+*.tsbuildinfo
