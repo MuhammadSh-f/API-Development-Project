@@ -2,7 +2,7 @@
 FROM node:16
 
 # Set working directory
-WORKDIR /app
+WORKDIR /app/src
 
 # Copy package.json and install dependencies
 COPY package.json tsconfig.json ./
@@ -12,7 +12,7 @@ RUN npm install
 COPY . .
 
 # Expose the application port
-EXPOSE 3000
+EXPOSE 8080
 
 # Start the application
 CMD ["npm", "run", "start"]
