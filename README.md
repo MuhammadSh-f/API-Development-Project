@@ -241,4 +241,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any questions or inquiries, feel free to reach out via [GitHub](@MuhammadSh-f), or email muhammadshaker.developer@gmail.com
+For any questions or inquiries, feel free to reach out via:
+
+- **GitHub**: [GitHub Profile](https://github.com/MuhammadSh-f)
+- **Email**: [Gmail](mailto:muhammadshaker.developer@gmail.com)
