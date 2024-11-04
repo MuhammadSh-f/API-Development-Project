@@ -6,15 +6,18 @@ This project is a robust backend application developed using TypeScript, designe
 
 ## Key Features
 
-- **User Authentication**: 
+- **User Authentication**:
+
   - Signup and signin endpoints with secure token generation.
   - Refresh token mechanism for extended user sessions.
 
 - **CRUD Operations**:
+
   - Create, read, update, and delete operations for organizations.
   - Manage organization members with specified access levels.
 
 - **Token Management**:
+
   - Implements token handling using Redis for efficient session management.
 
 - **Dockerized Application**:
@@ -35,6 +38,7 @@ This project is a robust backend application developed using TypeScript, designe
 ### User Authentication
 
 - **Signup**: `POST /signup`
+
   - Request Body:
     ```json
     {
@@ -51,6 +55,7 @@ This project is a robust backend application developed using TypeScript, designe
     ```
 
 - **Signin**: `POST /signin`
+
   - Request Body:
     ```json
     {
@@ -86,6 +91,7 @@ This project is a robust backend application developed using TypeScript, designe
 ### Organization Management
 
 - **Create Organization**: `POST /organization`
+
   - Authorization: Bearer [Token]
   - Request Body:
     ```json
@@ -102,6 +108,7 @@ This project is a robust backend application developed using TypeScript, designe
     ```
 
 - **Read Organization**: `GET /organization/{organization_id}`
+
   - Authorization: Bearer [Token]
   - Response:
     ```json
@@ -121,10 +128,21 @@ This project is a robust backend application developed using TypeScript, designe
 
 - **Read All Organizations**: `GET /organization`
   - Authorization: Bearer [Token]
-  - Response: 
+  - Response:
     ```json
     [
       {
         "organization_id": "string",
-        "name": "
-
+        "name": "string",
+        "description": "string",
+        "organization_members": [
+          {
+            "name": "string",
+            "email": "string",
+            "access_level": "string"
+          }
+        ]
+      },
+      {}
+    ]
+    ```
