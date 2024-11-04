@@ -127,6 +127,7 @@ This project is a robust backend application developed using TypeScript, designe
     ```
 
 - **Read All Organizations**: `GET /organization`
+
   - Authorization: Bearer [Token]
   - Response:
     ```json
@@ -142,7 +143,102 @@ This project is a robust backend application developed using TypeScript, designe
             "access_level": "string"
           }
         ]
-      },
-      {}
+      }
     ]
     ```
+
+- **Update Organization**: `PUT /organization/{organization_id}`
+
+  - Authorization: Bearer [Token]
+  - Request Body:
+    ```json
+    {
+      "name": "string",
+      "description": "string"
+    }
+    ```
+  - Response:
+    ```json
+    {
+      "organization_id": "string",
+      "name": "string",
+      "description": "string"
+    }
+    ```
+
+- **Delete Organization**: `DELETE /organization/{organization_id}`
+
+  - Authorization: Bearer [Token]
+  - Response:
+    ```json
+    {
+      "message": "string"
+    }
+    ```
+
+- **Invite User to Organization**: `POST /organization/{organization_id}/invite`
+  - Authorization: Bearer [Token]
+  - Request Body:
+    ```json
+    {
+      "user_email": "string"
+    }
+    ```
+  - Response:
+    ```json
+    {
+      "message": "string"
+    }
+    ```
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- Docker
+- MongoDB (or an online MongoDB URI)
+- Redis (or an online Redis URI)
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+  git clone https://github.com/MuhammadSh-f/API-Development-Project.git
+  cd API-Development-Project
+```
+
+2. Install dependencies:
+
+```bash
+  npm install
+```
+
+3. Configure environment variables:
+
+. Create a .env file in the root directory and add your MongoDB and Redis connection strings.
+
+4. Run the application using Docker:
+
+```bash
+  docker-compose up --build
+```
+
+5. Access the API at http://localhost:8080.
+
+## Deployment
+
+Follow the instructions in the deployment section of the documentation to deploy this project on AWS Elastic Beanstalk or any other cloud provider.
+
+## Contributing
+
+Contributions are welcome! Please create a pull request or open an issue to discuss changes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or inquiries, feel free to reach out via [GitHub](@MuhammadSh-f), or email muhammadshaker.developer@gmail.com
